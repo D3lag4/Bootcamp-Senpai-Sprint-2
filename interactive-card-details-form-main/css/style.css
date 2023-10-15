@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+body {
+    background-image: url(../images/bg-main-desktop.png);
+    background-repeat: no-repeat;
+    width: 1440px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 18px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+        "a c"
+        "b c";
+}
+
+.card_front {
+    grid-area: a;
+    transform: scale(0.9);
+    margin-left: 80px;
+}
+
+.card_back {
+    grid-area: b;
+    transform: scale(0.9);
+    margin-left: 180px;
+
+}
+
+.input_data {
+    grid-area: c;
+    margin-left: 40px;
+    margin-right: 90px;
+}
+
+
+#card_form {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 4;
+    grid-template-areas:
+        "d d d"
+        "e e e"
+        "f g h"
+        "i i i";
+
+    padding: 10px;
+    align-items: center;
+    margin-left: 20px;
+
+}
+
+label {
+    display: table-header-group;
+    color: rgb(71, 42, 165);
+
+}
+
+input {
+    border-width: 2px;
+    border-color: hsl(0, 2%, 37%);
+    border-radius: 1%;
+    background-color: antiquewhite;
+
+}
+
+#logo {
+    position: absolute;
+    top: 25px;
+    left: 40px;
+}
+
+#eg_cardnumber {
+    position: absolute;
+    font-size: 30px ;
+    top: 120px;
+    left: 90px;
+}
+
+#eg_name {
+    position: absolute;
+    top: 190px;
+    left: 40px;
+}
+
+#eg_date {
+    position: absolute;
+    top: 190px;
+    left: 350px;
+}
+
+#eg_cvc {
+    position: absolute;
+    top: 110px;
+    left: 340px;
+}
+
+.card_front_text {
+    color: rgb(230, 213, 213);
+}
+
+.card_back_text {
+    color: rgb(225, 212, 212);
+}
+
+.name {
+    grid-area: d;
+
+}
+
+.card_number {
+    grid-area: e;
+}
+
+.month {
+    grid-area: f;
+}
+
+.year {
+    grid-area: g;
+}
+
+.cvc {
+    grid-area: h;
+}
+
+.confirm {
+    grid-area: i;
+
+}
+
+button {
+    margin-top: 20px;
+    background-color: blueviolet;
+    color: rgb(201, 201, 212);
+    cursor: pointer;
+    width: 450px;
+    align-items: end;
+
+}
