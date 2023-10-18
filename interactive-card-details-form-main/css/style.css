@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+body {
+    background-image: url(../images/bg-main-desktop.png);
+    background-repeat: no-repeat;
+    background-size: 60dvh;
+    max-width: 1440px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 18px;
+}
+
+/*Contenedor y sub-contenedores*/
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.cards {
+    flex-direction: column;
+    align-items: center;
+}
+
+.card_front {
+    transform: scale(0.9);
+    margin-top: 100px;
+}
+
+.card_back {
+    transform: scale(0.9);
+    margin-left: 80px;
+}
+
+.data {
+    margin-top: 80px;
+    margin-left: 80px;
+}
+
+/**Tarjeta frontal**/
+
+#logo {
+    position: absolute;
+    top: 25px;
+    left: 40px;
+}
+
+#eg_cardnumber {
+    position: absolute;
+    font-size: 30px;
+    top: 120px;
+    left: 60px;
+}
+
+#eg_name {
+    position: absolute;
+    top: 190px;
+    left: 40px;
+}
+
+#eg_date {
+    position: absolute;
+    top: 190px;
+    left: 350px;
+}
+
+.card_front_text {
+    color: hsl(0, 0%, 100%);
+}
+
+/*Reverso Tarjeta*/
+
+#eg_cvc {
+    position: absolute;
+    top: 110px;
+    left: 340px;
+}
+
+.card_back_text {
+    color: hsl(0, 0%, 100%);
+}
+
+
+/*Formulario*/
+
+#card_form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+
+.card_data2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: ;
+
+}
+
+label {
+    display: flex;
+    justify-content: flex-start;
+    color: hsl(278, 68%, 11%);
+}
+
+input {
+    width: 90%;
+    height: 30px;
+    box-sizing: content-box;
+    border-width: 1px;
+    border-color: hsl(270, 3%, 87%);
+    border-radius: 8%;
+    background-color: hsl(0, 0%, 100%);
+    cursor: text;
+}
+
+input:focus {
+    border: 1px solid hsl(278, 68%, 11%);
+    border-radius: 5%;
+
+}
+
+.name {
+   
+}
+
+.card_number {
+    
+}
+
+.month {
+   padding-right: 15px;
+
+}
+
+.year {
+   
+    padding-right: 40px;
+}
+
+.cvc {
+   
+}
+
+button {
+    margin-top: 20px;
+    background-color: hsl(278, 68%, 11%);
+    color: hsl(270, 3%, 87%);
+    cursor: pointer;
+    width: 380px;
+
+}
+
+/*Mobile Version*/
+@media only screen and (max-width:375px) {
+
+    body {
+        background-image: url(../images/bg-main-mobile.png);
+        background-repeat: no-repeat;
+        background-size: 375px;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        }
+
+    .cards {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items:center;
+        transform: scale(70%);
+    }
+
+    .data {
+        display: flex;
+        flex-direction: column;
+        }
+
+    .card_front {
+        position: relative;
+        margin-top: 90px;
+        margin-right: 50px;
+        z-index: 1;
+    }
+
+    .card_back {
+        position:absolute;
+        margin-bottom: 125px;
+        z-index: 0;
+    }
+
+    .card_data2 {
+        display: flex;
+        width: 280px;
+        flex-direction: row;
+        justify-content: center;
+        align-content: space-around;
+
+    }
+
+    label {
+        display: flex;
+        justify-content:left;
+        color: hsl(278, 68%, 11%);
+    }
+
+    input {
+        width: 70%;
+        box-sizing: content-box;
+        border-width: 1px;
+        border-color: hsl(270, 3%, 87%);
+        border-radius: 8%;
+        background-color: hsl(0, 0%, 100%);
+        cursor: text;
+    }
+
+    input:focus {
+        border: 1px solid hsl(278, 68%, 11%);
+        border-radius: 5%;
+
+    }
+
+
+
+
+}
